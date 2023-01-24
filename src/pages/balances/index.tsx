@@ -20,7 +20,7 @@ const Balances: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Safe – Assets</title>
+        <title>ThunderCore Safe – Assets</title>
       </Head>
 
       <AssetsHeader>

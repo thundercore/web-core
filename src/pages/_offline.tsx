@@ -7,7 +7,7 @@ const Offline: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Safe – Offline</title>
+        <title>ThunderCore Safe – Offline</title>
       </Head>
 
       <main>

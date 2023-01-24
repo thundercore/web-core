@@ -6,7 +6,7 @@ const Import: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Safe – Data import</title>
+        <title>ThunderCore Safe – Data import</title>
       </Head>
 
       <main>

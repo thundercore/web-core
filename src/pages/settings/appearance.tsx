@@ -35,7 +35,7 @@ const Appearance: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Safe – Settings – Appearance</title>
+        <title>ThunderCore Safe – Settings – Appearance</title>
       </Head>
 
       <SettingsHeader />

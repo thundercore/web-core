@@ -26,7 +26,7 @@ const History: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Safe – Transaction history</title>
+        <title>ThunderCore Safe – Transaction history</title>
       </Head>
 
       <TxHeader

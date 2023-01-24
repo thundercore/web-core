@@ -7,7 +7,7 @@ const Data: NextPage = () => {
   return (
     <>
       <Head>
-        <title>Safe – Settings – Data</title>
+        <title>ThunderCore Safe – Settings – Data</title>
       </Head>
 
       <SettingsHeader />
