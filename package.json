@@ -21,7 +21,7 @@
     "generate-types:safeDeployments": "typechain --target ethers-v5 --out-dir src/types/contracts ./node_modules/@gnosis.pm/safe-deployments/dist/assets/**/*.json",
     "generate-types:spendingLimit": "typechain --target ethers-v5 --out-dir src/types/contracts ./node_modules/@gnosis.pm/safe-modules-deployments/dist/assets/**/*.json",
     "generate-types": "yarn generate-types:safeDeployments && yarn generate-types:spendingLimit",
-    "postinstall": "yarn patch-package && generate-types && yarn css-vars",
+    "postinstall": "yarn patch-package && yarn generate-types && yarn css-vars",
     "analyze": "cross-env ANALYZE=true yarn build",
     "cypress:open": "cross-env TZ=UTC cypress open",
     "cypress:run": "cypress run",
