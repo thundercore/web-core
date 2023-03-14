@@ -1,8 +1,12 @@
 diff --git a/node_modules/@gnosis.pm/safe-modules-deployments/dist/assets/allowance-module/v0.1.0/allowance-module.json b/node_modules/@gnosis.pm/safe-modules-deployments/dist/assets/allowance-module/v0.1.0/allowance-module.json
-index 0f19f4e..7e8622b 100644
+index 0f19f4e..d372003 100644
 --- a/node_modules/@gnosis.pm/safe-modules-deployments/dist/assets/allowance-module/v0.1.0/allowance-module.json
 +++ b/node_modules/@gnosis.pm/safe-modules-deployments/dist/assets/allowance-module/v0.1.0/allowance-module.json
-@@ -9,6 +9,7 @@
+@@ -6,9 +6,11 @@
+         "1": "0xCFbFaC74C26F8647cBDb8c5caf80BB5b32E43134",
+         "4": "0xCFbFaC74C26F8647cBDb8c5caf80BB5b32E43134",
+         "5": "0xCFbFaC74C26F8647cBDb8c5caf80BB5b32E43134",
++        "18": "0x7BAc635abdDc4687986a9DA8832eb0c140c9cffD",
          "42": "0xCFbFaC74C26F8647cBDb8c5caf80BB5b32E43134",
          "56": "0xCFbFaC74C26F8647cBDb8c5caf80BB5b32E43134",
          "100": "0xCFbFaC74C26F8647cBDb8c5caf80BB5b32E43134",
@@ -11,14 +15,18 @@ index 0f19f4e..7e8622b 100644
          "246": "0xCFbFaC74C26F8647cBDb8c5caf80BB5b32E43134",
          "43114": "0x1Fb403834C911eB98d56E74F5182b0d64C3b3b4D",
 diff --git a/node_modules/@gnosis.pm/safe-modules-deployments/src/assets/allowance-module/v0.1.0/allowance-module.json b/node_modules/@gnosis.pm/safe-modules-deployments/src/assets/allowance-module/v0.1.0/allowance-module.json
-index 700f9b0..8287bbe 100644
+index 700f9b0..0674bf5 100644
 --- a/node_modules/@gnosis.pm/safe-modules-deployments/src/assets/allowance-module/v0.1.0/allowance-module.json
 +++ b/node_modules/@gnosis.pm/safe-modules-deployments/src/assets/allowance-module/v0.1.0/allowance-module.json
-@@ -9,6 +9,7 @@
+@@ -6,9 +6,11 @@
+     "1": "0xCFbFaC74C26F8647cBDb8c5caf80BB5b32E43134",
+     "4": "0xCFbFaC74C26F8647cBDb8c5caf80BB5b32E43134",
+     "5": "0xCFbFaC74C26F8647cBDb8c5caf80BB5b32E43134",
++    "18": "0x7BAc635abdDc4687986a9DA8832eb0c140c9cffD",
      "42": "0xCFbFaC74C26F8647cBDb8c5caf80BB5b32E43134",
      "56": "0xCFbFaC74C26F8647cBDb8c5caf80BB5b32E43134",
      "100": "0xCFbFaC74C26F8647cBDb8c5caf80BB5b32E43134",
-+    "108": "0xe07fB43c8732Dc9CABB9616d8895F9e4833fEe89",
++    "108": "0xc9107Aeb72D41333C0Fec5b0F330bf364E661E2E",
      "137": "0x1Fb403834C911eB98d56E74F5182b0d64C3b3b4D",
      "246": "0xCFbFaC74C26F8647cBDb8c5caf80BB5b32E43134",
      "43114": "0x1Fb403834C911eB98d56E74F5182b0d64C3b3b4D",
