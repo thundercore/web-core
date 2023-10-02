@@ -1,70 +1,37 @@
-import type { ReactElement, ReactNode } from 'react'
-import { useEffect } from 'react'
-import { isEmpty } from 'lodash'
-import type { FEATURES } from '@safe-global/safe-gateway-typescript-sdk'
-import { IconButton } from '@mui/material'
+import { type ReactElement } from 'react'
 import CloseIcon from '@mui/icons-material/Close'
-import styles from './index.module.css'
-import { hasFeature } from '@/utils/chains'
-import { useCurrentChain } from '@/hooks/useChains'
-import useLocalStorage from '@/services/local-storage/useLocalStorage'
-import { useRouter } from 'next/router'
-import { selectAllAddressBooks } from '@/store/addressBookSlice'
-import { useAppSelector } from '@/store'
+import css from './styles.module.css'
+import { useAppDispatch, useAppSelector } from '@/store'
+import { closePSABanner, selectPSABanner } from '@/store/bannerSlice'
 
-const WARNING_BANNER = 'WARNING_BANNER'
-const OLD_APP = 'https://gnosis-safe.io/app'
-
-const ExportLink = ({ children }: { children: ReactNode }): ReactElement => {
-  const router = useRouter()
-  const safeAddress = router.query.safe as string
-  const url = safeAddress ? `${OLD_APP}/${safeAddress}/settings/details` : `${OLD_APP}/export`
-
-  return (
-    <a href={url} target="_blank" rel="noreferrer">
-      {children}
-    </a>
-  )
+type BannerType = {
+  [key: string]: ReactElement | string
 }
 
-const BANNERS: Record<string, ReactElement | string> = {
-  '*': (
+const BANNERS: BannerType = {
+  WARNING_BANNER: (
     <>
-      <b>app.safe.global</b> is Safe&apos;s new official URL. Export your data from the old app{' '}
-      <ExportLink>here</ExportLink>.
+      The ThunderCore Safe project will be discontinued. Kindly request that you move your funds by October 9th. If you
+      do not have time to take this action, please seek assistance directly from ThunderCore after the deadline.
     </>
   ),
 }
-
 const PsaBanner = (): ReactElement | null => {
-  const chain = useCurrentChain()
-  const banner = chain ? BANNERS[chain.chainId] || BANNERS['*'] : undefined
-  const isEnabled = chain && hasFeature(chain, WARNING_BANNER as FEATURES)
-  const [closed = false, setClosed] = useLocalStorage<boolean>(`${WARNING_BANNER}_closed`)
+  const banner = BANNERS['WARNING_BANNER']
 
-  // Address books on all chains
-  const ab = useAppSelector(selectAllAddressBooks)
-
-  const showBanner = Boolean(isEnabled && banner && !closed && isEmpty(ab))
+  const dispatch = useAppDispatch()
+  const open = useAppSelector(selectPSABanner).open
+  const showBanner = banner && open
 
   const onClose = () => {
-    setClosed(true)
+    dispatch(closePSABanner())
   }
 
-  useEffect(() => {
-    const className = 'psaBanner'
-    document.documentElement.classList?.toggle(className, showBanner)
-    return () => document.documentElement.classList?.remove(className)
-  }, [showBanner])
-
   return showBanner ? (
-    <div className={styles.banner}>
-      <div className={styles.wrapper}>
-        <div className={styles.content}>{banner}</div>
-
-        <IconButton className={styles.close} onClick={onClose} aria-label="dismiss announcement banner">
-          <CloseIcon />
-        </IconButton>
+    <div className={css.banner}>
+      <div className={css.wrapper}>
+        <div className={css.content}>{banner}</div>
+        <CloseIcon className={css.close} onClick={onClose} />
       </div>
     </div>
   ) : null
