@@ -1,0 +1,42 @@
+.banner {
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    background-color: rgb(0, 140, 115);
+    color: #fff;
+    padding: 5px 20px;
+    font-size: 16px;
+}
+
+.banner a {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.banner a:not([href]) {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* height: 70px; */
+}
+
+.content {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+}
+
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
