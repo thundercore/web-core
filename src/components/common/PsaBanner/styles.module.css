@@ -2,7 +2,8 @@
     position: sticky;
     top: 0;
     z-index: 10000;
-    background-color: rgb(0, 140, 115);
+    background: rgb(0,66,170);
+    background: linear-gradient(180deg, rgba(0,66,170,1) 0%, rgba(0,73,186,0.989233193277311) 11%, rgba(0,212,255,1) 78%, rgba(0,212,255,0) 100%);
     color: #fff;
     padding: 5px 20px;
     font-size: 16px;
@@ -23,14 +24,14 @@
     position: relative;
     display: flex;
     flex-direction: column;
-    /* height: 70px; */
+    min-height: 70px;
 }
 
 .content {
     max-width: 960px;
     margin: 0 auto;
     text-align: center;
-    padding: 10px;
+    padding: 10px 40px;
 }
 
 .close {
